@@ -2044,7 +2044,7 @@ int blender_connection(App& app) {
 
     //Bind socket
     // Setup the TCP listening socket
-    if (bind(ListenSocket, (struct sockaddr*)&address, sizeof(address))< 0) {
+    if (::bind(ListenSocket, (struct sockaddr*)&address, sizeof(address))< 0) {
         perror("bind failed");
         exit(EXIT_FAILURE);
     }
