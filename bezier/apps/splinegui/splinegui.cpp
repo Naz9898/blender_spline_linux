@@ -2030,10 +2030,10 @@ int blender_connection(App& app) {
     }
  
     // Forcefully attaching socket to the port
-    if (setsockopt(ListenSocket, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {
+    /*if (setsockopt(ListenSocket, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {
         perror("setsockopt");
         exit(EXIT_FAILURE);
-    }
+    }*/
 
     //Create socket
     address.sin_family = AF_INET;
